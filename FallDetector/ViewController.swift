@@ -11,18 +11,42 @@ import CoreMotion
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var button: UIButton!
+    
     
     var motionManager = CMMotionManager()
     var timer:Timer?
     let queue = OperationQueue()
+    var started = false
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        start()
+        refresh()
+    }
+    
+    func refresh() {
+        if started {
+            self.button.setTitle("Stop", for: .normal)
+        }
+        else {
+            self.button.setTitle("Start", for: .normal)
+        }
     }
 
+    @IBAction func handleStopStart(_ sender: Any) {
+        if started {
+            motionManager.stopDeviceMotionUpdates()
+        }
+        else {
+            start()
+        }
+        started = !started
+        refresh()
+    }
+    
     func start() {
         motionManager.gyroUpdateInterval = 0.10
         motionManager.accelerometerUpdateInterval = 0.10
@@ -30,22 +54,22 @@ class ViewController: UIViewController {
         motionManager.startDeviceMotionUpdates(to: queue) { (motion, error) in
             guard let motion = motion else { return }
 
-            let gx = motion.gravity.x
-            let gy = motion.gravity.y
-            let gz = motion.gravity.z
-            let ax = motion.userAcceleration.x
-            let ay = motion.userAcceleration.y
-            let az = motion.userAcceleration.z
-            let rx = motion.rotationRate.x
-            let ry = motion.rotationRate.y
-            let rz = motion.rotationRate.z
-            let pitch = motion.attitude.pitch
-            let roll = motion.attitude.roll
-            let yaw = motion.attitude.yaw
-            
+            let gx = String(format: "%0.2f", motion.gravity.x)
+            let gy = String(format: "%0.2f", motion.gravity.y)
+            let gz = String(format: "%0.2f", motion.gravity.z)
+            let ax = String(format: "%0.2f", motion.userAcceleration.x)
+            let ay = String(format: "%0.2f", motion.userAcceleration.y)
+            let az = String(format: "%0.2f", motion.userAcceleration.z)
+            let rx = String(format: "%0.2f", motion.rotationRate.x)
+            let ry = String(format: "%0.2f", motion.rotationRate.y)
+            let rz = String(format: "%0.2f", motion.rotationRate.z)
+            let pitch = String(format: "%0.2f", motion.attitude.pitch)
+            let roll = String(format: "%0.2f", motion.attitude.roll)
+            let yaw = String(format: "%0.2f", motion.attitude.yaw)
+
 //            let sensorArray = [roll, pitch, yaw, gx, gy, gz, ax, ay, az, rx, ry, rz]
             DispatchQueue.main.async {
-                self.label.text = "rpw: \(roll),\(pitch),\(yaw), g:\(gx),\(gy),\(gz), a:\(ax),\(ay),\(az), r:\(rx),\(ry),\(rz)"
+                self.label.text = "rpw: \(roll),\(pitch),\(yaw)\n g:\(gx),\(gy),\(gz)\na:\(ax),\(ay),\(az)\n r:\(rx),\(ry),\(rz)"
             }
         }
 

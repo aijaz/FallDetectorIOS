@@ -22,18 +22,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nxN-GA-QVX">
+                                <rect key="frame" x="16" y="666" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8O-PR-JrN">
+                                <rect key="frame" x="159" y="739" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="handleStopStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5wP-ri-1hT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EW3-8h-7jb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="86G-gv-MSE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nxN-GA-QVX" secondAttribute="bottom" constant="118" id="Kt0-4r-D4Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EW3-8h-7jb" secondAttribute="trailing" constant="16" id="LET-L3-g2K"/>
                             <constraint firstItem="EW3-8h-7jb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="TKk-wY-sVC"/>
+                            <constraint firstItem="nxN-GA-QVX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Y3M-Xc-llN"/>
+                            <constraint firstItem="B8O-PR-JrN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dW0-R6-vCB"/>
+                            <constraint firstItem="B8O-PR-JrN" firstAttribute="top" secondItem="nxN-GA-QVX" secondAttribute="bottom" constant="39" id="eGJ-V2-XN5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nxN-GA-QVX" secondAttribute="trailing" constant="16" id="vOu-gc-UBm"/>
                             <constraint firstItem="EW3-8h-7jb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yl6-H0-WY6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="B8O-PR-JrN" id="fUl-Dj-cBD"/>
                         <outlet property="label" destination="EW3-8h-7jb" id="HYf-D8-DI8"/>
+                        <outlet property="textField" destination="nxN-GA-QVX" id="xdz-Ih-UPV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
