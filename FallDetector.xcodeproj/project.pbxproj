@@ -16,6 +16,9 @@
 		1D01727029F002C900DF64B3 /* FallDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01726F29F002C900DF64B3 /* FallDetectorTests.swift */; };
 		1D01727A29F002C900DF64B3 /* FallDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01727929F002C900DF64B3 /* FallDetectorUITests.swift */; };
 		1D01727C29F002C900DF64B3 /* FallDetectorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01727B29F002C900DF64B3 /* FallDetectorUITestsLaunchTests.swift */; };
+		3E1707688B0ACAB52D09FE60 /* Pods_FallDetector_FallDetectorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D4EC03CB5BC1AF5D772EB2 /* Pods_FallDetector_FallDetectorUITests.framework */; };
+		88B17022D270D6F2007F4747 /* Pods_FallDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A32A64072BD8E74ED707441 /* Pods_FallDetector.framework */; };
+		89502A7D68EF44A9F3800AA6 /* Pods_FallDetectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBF75236BBAD097BB6E4360 /* Pods_FallDetectorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D4EC03CB5BC1AF5D772EB2 /* Pods_FallDetector_FallDetectorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallDetector_FallDetectorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A32A64072BD8E74ED707441 /* Pods_FallDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F20FAACA542547D6B286020 /* Pods-FallDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallDetector.debug.xcconfig"; path = "Target Support Files/Pods-FallDetector/Pods-FallDetector.debug.xcconfig"; sourceTree = "<group>"; };
 		1D01725529F002C800DF64B3 /* FallDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D01725829F002C800DF64B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D01725A29F002C800DF64B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		1D01727529F002C900DF64B3 /* FallDetectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FallDetectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D01727929F002C900DF64B3 /* FallDetectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallDetectorUITests.swift; sourceTree = "<group>"; };
 		1D01727B29F002C900DF64B3 /* FallDetectorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallDetectorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3E20733161CA71B1F9D56774 /* Pods-FallDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallDetector.release.xcconfig"; path = "Target Support Files/Pods-FallDetector/Pods-FallDetector.release.xcconfig"; sourceTree = "<group>"; };
+		4192D681520F5A2E3111D87A /* Pods-FallDetector-FallDetectorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallDetector-FallDetectorUITests.debug.xcconfig"; path = "Target Support Files/Pods-FallDetector-FallDetectorUITests/Pods-FallDetector-FallDetectorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		65BFA3D107685CE33B82DB73 /* Pods-FallDetector-FallDetectorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallDetector-FallDetectorUITests.release.xcconfig"; path = "Target Support Files/Pods-FallDetector-FallDetectorUITests/Pods-FallDetector-FallDetectorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6804D0037B100C34B078C7D4 /* Pods-FallDetectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallDetectorTests.release.xcconfig"; path = "Target Support Files/Pods-FallDetectorTests/Pods-FallDetectorTests.release.xcconfig"; sourceTree = "<group>"; };
+		6EBF75236BBAD097BB6E4360 /* Pods_FallDetectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallDetectorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED41F4D73937583172A0A8DF /* Pods-FallDetectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallDetectorTests.debug.xcconfig"; path = "Target Support Files/Pods-FallDetectorTests/Pods-FallDetectorTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B17022D270D6F2007F4747 /* Pods_FallDetector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89502A7D68EF44A9F3800AA6 /* Pods_FallDetectorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E1707688B0ACAB52D09FE60 /* Pods_FallDetector_FallDetectorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				1D01726E29F002C900DF64B3 /* FallDetectorTests */,
 				1D01727829F002C900DF64B3 /* FallDetectorUITests */,
 				1D01725629F002C800DF64B3 /* Products */,
+				7911DF94AAFC0B988295CE54 /* Pods */,
+				B513CBD6CDC0AA4A7EC18F5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,29 @@
 			path = FallDetectorUITests;
 			sourceTree = "<group>";
 		};
+		7911DF94AAFC0B988295CE54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F20FAACA542547D6B286020 /* Pods-FallDetector.debug.xcconfig */,
+				3E20733161CA71B1F9D56774 /* Pods-FallDetector.release.xcconfig */,
+				4192D681520F5A2E3111D87A /* Pods-FallDetector-FallDetectorUITests.debug.xcconfig */,
+				65BFA3D107685CE33B82DB73 /* Pods-FallDetector-FallDetectorUITests.release.xcconfig */,
+				ED41F4D73937583172A0A8DF /* Pods-FallDetectorTests.debug.xcconfig */,
+				6804D0037B100C34B078C7D4 /* Pods-FallDetectorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B513CBD6CDC0AA4A7EC18F5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A32A64072BD8E74ED707441 /* Pods_FallDetector.framework */,
+				09D4EC03CB5BC1AF5D772EB2 /* Pods_FallDetector_FallDetectorUITests.framework */,
+				6EBF75236BBAD097BB6E4360 /* Pods_FallDetectorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D01727F29F002C900DF64B3 /* Build configuration list for PBXNativeTarget "FallDetector" */;
 			buildPhases = (
+				8520BF0722B82B422628FB80 /* [CP] Check Pods Manifest.lock */,
 				1D01725129F002C800DF64B3 /* Sources */,
 				1D01725229F002C800DF64B3 /* Frameworks */,
 				1D01725329F002C800DF64B3 /* Resources */,
+				F6558C3B5248ADC44F41E510 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D01728229F002C900DF64B3 /* Build configuration list for PBXNativeTarget "FallDetectorTests" */;
 			buildPhases = (
+				7935136F3783C0D5B400638B /* [CP] Check Pods Manifest.lock */,
 				1D01726729F002C900DF64B3 /* Sources */,
 				1D01726829F002C900DF64B3 /* Frameworks */,
 				1D01726929F002C900DF64B3 /* Resources */,
@@ -169,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D01728529F002C900DF64B3 /* Build configuration list for PBXNativeTarget "FallDetectorUITests" */;
 			buildPhases = (
+				35D133971D7E28C132BE691E /* [CP] Check Pods Manifest.lock */,
 				1D01727129F002C900DF64B3 /* Sources */,
 				1D01727229F002C900DF64B3 /* Frameworks */,
 				1D01727329F002C900DF64B3 /* Resources */,
+				38471FF9DA89AD4B54F88923 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +297,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35D133971D7E28C132BE691E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FallDetector-FallDetectorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38471FF9DA89AD4B54F88923 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FallDetector-FallDetectorUITests/Pods-FallDetector-FallDetectorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FallDetector-FallDetectorUITests/Pods-FallDetector-FallDetectorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FallDetector-FallDetectorUITests/Pods-FallDetector-FallDetectorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7935136F3783C0D5B400638B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FallDetectorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8520BF0722B82B422628FB80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FallDetector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6558C3B5248ADC44F41E510 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FallDetector/Pods-FallDetector-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FallDetector/Pods-FallDetector-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FallDetector/Pods-FallDetector-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D01725129F002C800DF64B3 /* Sources */ = {
@@ -432,6 +580,7 @@
 		};
 		1D01728029F002C900DF64B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F20FAACA542547D6B286020 /* Pods-FallDetector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,8 +592,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +609,7 @@
 		};
 		1D01728129F002C900DF64B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E20733161CA71B1F9D56774 /* Pods-FallDetector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,8 +621,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +638,7 @@
 		};
 		1D01728329F002C900DF64B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED41F4D73937583172A0A8DF /* Pods-FallDetectorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +659,7 @@
 		};
 		1D01728429F002C900DF64B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6804D0037B100C34B078C7D4 /* Pods-FallDetectorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +680,7 @@
 		};
 		1D01728629F002C900DF64B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4192D681520F5A2E3111D87A /* Pods-FallDetector-FallDetectorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +699,7 @@
 		};
 		1D01728729F002C900DF64B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65BFA3D107685CE33B82DB73 /* Pods-FallDetector-FallDetectorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

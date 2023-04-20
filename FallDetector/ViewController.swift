@@ -7,8 +7,10 @@
 
 import UIKit
 import CoreMotion
+import Starscream
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, WebSocketDelegate {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -19,12 +21,22 @@ class ViewController: UIViewController {
     var timer:Timer?
     let queue = OperationQueue()
     var started = false
+    var socket: WebSocket?
+    var isConnected = false
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         refresh()
+    }
+    
+    func startSocket() {
+        var request = URLRequest(url: URL(string: "http://\(self.textField.text ?? ""):8080")!)
+        request.timeoutInterval = 5
+        socket = WebSocket(request: request)
+        socket!.delegate = self
+        socket!.connect()
     }
     
     func refresh() {
@@ -39,8 +51,13 @@ class ViewController: UIViewController {
     @IBAction func handleStopStart(_ sender: Any) {
         if started {
             motionManager.stopDeviceMotionUpdates()
+            if isConnected {
+                socket?.disconnect()
+                socket = nil
+            }
         }
         else {
+            socket?.connect()
             start()
         }
         started = !started
@@ -50,10 +67,10 @@ class ViewController: UIViewController {
     func start() {
         motionManager.gyroUpdateInterval = 0.10
         motionManager.accelerometerUpdateInterval = 0.10
-  
+        
         motionManager.startDeviceMotionUpdates(to: queue) { (motion, error) in
             guard let motion = motion else { return }
-
+            
             let gx = String(format: "%0.2f", motion.gravity.x)
             let gy = String(format: "%0.2f", motion.gravity.y)
             let gz = String(format: "%0.2f", motion.gravity.z)
@@ -66,61 +83,43 @@ class ViewController: UIViewController {
             let pitch = String(format: "%0.2f", motion.attitude.pitch)
             let roll = String(format: "%0.2f", motion.attitude.roll)
             let yaw = String(format: "%0.2f", motion.attitude.yaw)
-
-//            let sensorArray = [roll, pitch, yaw, gx, gy, gz, ax, ay, az, rx, ry, rz]
+            
             DispatchQueue.main.async {
                 self.label.text = "rpw: \(roll),\(pitch),\(yaw)\n g:\(gx),\(gy),\(gz)\na:\(ax),\(ay),\(az)\n r:\(rx),\(ry),\(rz)"
             }
+            if self.isConnected {
+                self.socket!.write(string: "\(pitch),\(roll),\(yaw),\(gx),\(gy),\(gz),\(ax),\(ay),\(az),\(rx),\(ry),\(rz)")
+            }
         }
-
-
-//        motionManager.startGyroUpdates(to: .current!) { (data, error) in
-//            if let data = data {
-//                print(data)
-//                if let accelerometerData = self.motionManager.accelerometerData {
-//                }
-//            }
-//        }
-//
-//        motionManager.startAccelerometerUpdates(to: .current!) { (data, error) in
-//            if let data = data {
-//                print(data)
-//                if let accelerometerData = self.motionManager.accelerometerData {
-//                }
-//            }
-//        }
     }
     
-//    func handleData(data: CMDeviceMotion) {
-//        // Get the attitude relative to the magnetic north reference frame.
-//        let x = data.attitude.pitch
-//        let y = data.attitude.roll
-//        let z = data.attitude.yaw
-//
-//        // Use the motion data in your app.
-//
-//    }
-    
-//    func startDeviceMotion() {
-//        if motionManager.isDeviceMotionAvailable {
-//            let interval = 1.0/60.0
-//            self.motionManager.deviceMotionUpdateInterval = interval
-//            self.motionManager.showsDeviceMovementDisplay = true
-//            self.motionManager.startDeviceMotionUpdates(using: .xMagneticNorthZVertical)
-//
-//            // Configure a timer to fetch the motion data.
-//            self.timer = Timer(fire: Date(), interval: interval, repeats: true,
-//                               block: { timer in
-//                                if let data = self.motion.deviceMotion {
-//                                    handleData(data: data)
-//                                }
-//            })
-//
-//            // Add the timer to the current run loop.
-//            RunLoop.current.add(self.timer!, forMode: RunLoop.Mode.default)
-//        }
-//    }
-
+    func didReceive(event: WebSocketEvent, client: WebSocket) {
+        switch event {
+        case .connected(let headers):
+            isConnected = true
+            print("websocket is connected: \(headers)")
+        case .disconnected(let reason, let code):
+            isConnected = false
+            print("websocket is disconnected: \(reason) with code: \(code)")
+        case .text(let string):
+            print("Received text: \(string)")
+        case .binary(let data):
+            print("Received data: \(data.count)")
+        case .ping(_):
+            break
+        case .pong(_):
+            break
+        case .viabilityChanged(_):
+            break
+        case .reconnectSuggested(_):
+            break
+        case .cancelled:
+            isConnected = false
+        case .error(let error):
+            isConnected = false
+            print("Error: \(String(describing: error))")
+        }
+    }
 
 }
 
