@@ -10,7 +10,7 @@ import CoreMotion
 import Starscream
 
 
-class ViewController: UIViewController, WebSocketDelegate {
+class ViewController: UIViewController, WebSocketDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -28,11 +28,12 @@ class ViewController: UIViewController, WebSocketDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.textField.delegate = self
         refresh()
     }
     
     func startSocket() {
-        var request = URLRequest(url: URL(string: "http://\(self.textField.text ?? ""):8080")!)
+        var request = URLRequest(url: URL(string: "ws://\(self.textField.text ?? ""):8765")!)
         request.timeoutInterval = 5
         socket = WebSocket(request: request)
         socket!.delegate = self
@@ -57,7 +58,7 @@ class ViewController: UIViewController, WebSocketDelegate {
             }
         }
         else {
-            socket?.connect()
+            startSocket()
             start()
         }
         started = !started
@@ -119,6 +120,11 @@ class ViewController: UIViewController, WebSocketDelegate {
             isConnected = false
             print("Error: \(String(describing: error))")
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.textField.resignFirstResponder()
+        return true
     }
 
 }
